@@ -1,2 +1,2 @@
-# RockPaperScissor
-A Rock Paper Scissor written in javascript 
+# Rock Paper Scissor
+A Rock Paper Scissor written in javascript
