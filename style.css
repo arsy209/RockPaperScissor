@@ -1,0 +1,52 @@
+.hand li {
+	cursor: pointer;
+}
+
+
+#player-hand {
+	list-style-type: none;
+	overflow: hidden;
+	padding-left: 0;
+}
+
+#player-hand li {
+	float: left;
+	width: 100px;
+	padding: 80px 0;
+	border: 1px solid #ccc;
+	text-align: center;
+	margin-right: 10px;
+	background-color: #D57861;
+}
+
+#comp-hand {
+	width: 100px;
+	padding: 80px 0;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+#player-hand li:hover {
+	background-color: #D3ACAB  ;
+}
+
+#comp-score, #player-score {
+
+}
+
+#comp-score span, #player-score span {
+	font-size: 20px;
+	color: blue;
+}
+
+body {
+	background-color: #A2CBA3;
+}
+
+.title {
+	margin-left: 430px;
+}
+
+#turn-result {
+	color:#6A0303;
+}
