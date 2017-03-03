@@ -1,11 +1,11 @@
-var	computerScore = 0,
-	playerScore = 0,
-	computerHand = ["rock", "paper", "scissor"],
-	playerHandSelector = document.getElementById("player-hand"),
-	computerScoreHolder = document.querySelectorAll("#comp-score span")[0],
-	playerScoreHolder = document.querySelectorAll("#player-score span")[0],
-	computerHandPlaceHolder = document.getElementById("computer-hand"),
-	turnResult = document.getElementById("turn-result");
+var computerScore = 0,
+		playerScore = 0,
+		computerHand = ["rock", "paper", "scissor"],
+		playerHandSelector = document.getElementById("player-hand"),
+		computerScoreHolder = document.querySelectorAll("#comp-score span")[0],
+		playerScoreHolder = document.querySelectorAll("#player-score span")[0],
+		computerHandPlaceHolder = document.getElementById("computer-hand"),
+		turnResult = document.getElementById("turn-result");
 
 
 function randomInteger(min, max){
@@ -15,11 +15,11 @@ function randomInteger(min, max){
 function playTurn(event) {
 
 	var	turnResultContent,
-		computerChoice = computerHand[randomInteger(0,2)],
-		playerChoice = event.target.classList[0];
-		computerHandPlaceHolder.setAttribute("class", "");
-		computerHandPlaceHolder.classList.add(computerChoice)
-		computerHandPlaceHolder.textContent = computerChoice;
+			computerChoice = computerHand[randomInteger(0,2)],
+			playerChoice = event.target.classList[0];
+			computerHandPlaceHolder.setAttribute("class", "");
+			computerHandPlaceHolder.classList.add(computerChoice)
+			computerHandPlaceHolder.textContent = computerChoice;
 
 
 	if( computerChoice === playerChoice ) {
@@ -28,7 +28,6 @@ function playTurn(event) {
 
 	else if (
 		(computerChoice === "rock" && playerChoice === "scissor") || (computerChoice === "paper" && playerChoice === "rock") || (computerChoice === "scissor" && playerChoice === "paper")) {
-
 		computerScore++;
 		turnResult.textContent = "Computer wins!";
 		computerScoreHolder.textContent = computerScore;
@@ -40,7 +39,6 @@ function playTurn(event) {
 		turnResult.textContent = "You win!";
 		playerScoreHolder.textContent = playerScore;
 	}
-
 }
 
 playerHandSelector.addEventListener(
